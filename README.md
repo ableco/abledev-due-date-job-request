@@ -4,7 +4,10 @@
    be run from the same server that serves the backend functions. Maybe use
    https://www.npmjs.com/package/express-middleware-rollup.
 
-2. Make a rollup plugin (because that's what microbundle and tsdx uses) to
+2. Figure out how to expose the component and the handler in a way that they can
+   be used by an external project.
+
+3. Make a rollup plugin (because that's what microbundle and tsdx uses) to
    transform all imports of queries and mutations outside queries and mutations
    from:
 
@@ -19,4 +22,4 @@
    const someQuery = queryMetadata["some-query"];
    ```
 
-3. Figure out how to pass types from the backend hooks into the component.
+4. Figure out how to pass types from the backend hooks into the component.
