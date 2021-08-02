@@ -1,7 +1,13 @@
 {
+  "name": "due-date",
   "version": "0.1.0",
+  "author": "Julio García",
+  "type": "module",
+  "source": "src/index.tsx",
+  "main": "dist/due-date.js",
+  "umd:main": "dist/due-date.umd.js",
+  "module": "dist/due-date.m.js",
   "license": "MIT",
-  "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist",
@@ -11,47 +17,37 @@
     "node": ">=10"
   },
   "scripts": {
-    "start:server": "ts-node server.ts",
-    "start": "tsdx watch",
-    "build": "tsdx build",
-    "test": "tsdx test --passWithNoTests",
-    "lint": "tsdx lint",
-    "prepare": "tsdx build",
+    "backend:start": "node --loader ts-node/esm server.ts",
+    "build:start": "microbundle watch --jsx React.createElement",
+    "preview:start": "cd preview && yarn && yarn start",
+    "build": "microbundle --jsx React.createElement",
+    "prepare": "microbundle --jsx React.createElement",
     "size": "size-limit",
     "analyze": "size-limit --why"
   },
   "peerDependencies": {
     "react": ">=16"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "tsdx lint"
-    }
-  },
-  "prettier": {
-    "semi": true,
-    "trailingComma": "all",
-    "proseWrap": "always"
-  },
-  "name": "due-date",
-  "author": "Julio García",
-  "module": "dist/due-date.esm.js",
   "size-limit": [
     {
       "path": "dist/due-date.cjs.production.min.js",
-      "limit": "10 KB"
+      "limit": "100 KB"
     },
     {
       "path": "dist/due-date.esm.js",
-      "limit": "10 KB"
+      "limit": "100 KB"
     }
   ],
+  "dependencies": {
+    "react-query": "^3.19.1"
+  },
   "devDependencies": {
     "@size-limit/preset-small-lib": "^5.0.2",
     "@types/cors": "^2.8.12",
     "@types/express": "^4.17.13",
     "@types/glob": "^7.1.4",
     "@types/morgan": "^1.9.3",
+    "@types/prettier": "^2.3.2",
     "@types/react": "^17.0.15",
     "@types/react-dom": "^17.0.9",
     "@types/webpack-dev-middleware": "^5.0.1",
@@ -61,7 +57,7 @@
     "express-async-handler": "^1.1.4",
     "glob": "^7.1.7",
     "html-webpack-plugin": "^5.3.2",
-    "husky": "^7.0.1",
+    "microbundle": "^0.13.3",
     "morgan": "^1.10.0",
     "prettier": "^2.3.2",
     "react": "^17.0.2",
@@ -69,13 +65,9 @@
     "size-limit": "^5.0.2",
     "ts-loader": "^9.2.4",
     "ts-node": "^10.1.0",
-    "tsdx": "^0.14.1",
     "tslib": "^2.3.0",
     "typescript": "^4.3.5",
     "webpack": "^5.48.0",
     "webpack-dev-middleware": "^5.0.0"
-  },
-  "dependencies": {
-    "react-query": "^3.19.1"
   }
 }

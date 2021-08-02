@@ -1,6 +1,7 @@
+import "regenerator-runtime/runtime";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { DueDate } from "../dist";
+import { DueDate } from "../dist/due-date.modern";
 
 const App = () => {
   return (

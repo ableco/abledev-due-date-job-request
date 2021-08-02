@@ -13,6 +13,6 @@ const server = createServer((request, response) => {
 });
 
 // TODO: Use 3000 once we use the same process for the dev server
-listenOnAvailablePort(server, 5000).then(port => {
+listenOnAvailablePort(server, 5000).then((port) => {
   console.log("Server listening at port", port);
 });

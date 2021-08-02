@@ -1,6 +1,11 @@
 {
   "_message": "This is a generated file. Modifications here will be overriden.",
   "functionMappings": {
+    "queries/another-query": {
+      "fileName": "queries/another-query.ts",
+      "functionName": "queries/another-query",
+      "type": "query"
+    },
     "queries/some-query": {
       "fileName": "queries/some-query.ts",
       "functionName": "queries/some-query",
