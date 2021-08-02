@@ -1,16 +1,12 @@
 ## Plan
 
-1. Add `server.ts` file that when runs does this:
+1. Replace the example that uses parcel with something that uses rollup and can
+   be run from the same server that serves the backend functions. Maybe use
+   https://www.npmjs.com/package/express-middleware-rollup.
 
-   1. Reads and watches queries and mutations to:
-      1. Builds an object that maps queries and mutation names to paths.
-      2. Creates a file called `src/abledev/queryMetadata.ts` that exports the
-         object created in the previous step.
-   2. Responds to those urls by calling the files associated with them. It first
-      compiles them.
-
-2. Make a rollup plugin (because that's what tsdx uses) to transform all imports
-   of queries and mutations outside queries and mutations from:
+2. Make a rollup plugin (because that's what microbundle and tsdx uses) to
+   transform all imports of queries and mutations outside queries and mutations
+   from:
 
    ```ts
    import someQuery from "./queries/some-query";
@@ -22,3 +18,5 @@
    import queryMetadata from "./abledev/queryMetadata";
    const someQuery = queryMetadata["some-query"];
    ```
+
+3. Figure out how to pass types from the backend hooks into the component.

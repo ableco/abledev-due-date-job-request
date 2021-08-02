@@ -1,0 +1,15 @@
+{
+  "_message": "This is a generated file. Modifications here will be overriden.",
+  "functionMappings": {
+    "queries/some-query": {
+      "fileName": "queries/some-query.ts",
+      "functionName": "queries/some-query",
+      "type": "query"
+    },
+    "mutations/create-stuff": {
+      "fileName": "mutations/create-stuff.ts",
+      "functionName": "mutations/create-stuff",
+      "type": "mutation"
+    }
+  }
+}
