@@ -23,3 +23,8 @@
    ```
 
 4. Figure out how to pass types from the backend hooks into the component.
+
+5. Move some parts of this project into a package `abledev`. (Maybe use a
+   monorepo?)
+
+6. Create a CLI that can generate this structure.
