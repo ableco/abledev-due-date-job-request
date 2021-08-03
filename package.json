@@ -4,24 +4,25 @@
   "author": "Julio García",
   "type": "module",
   "source": "src/index.tsx",
-  "main": "dist/due-date.js",
+  "main": "dist/due-date.cjs",
   "umd:main": "dist/due-date.umd.js",
-  "module": "dist/due-date.m.js",
+  "module": "dist/due-date.js",
   "license": "MIT",
   "typings": "dist/index.d.ts",
   "files": [
     "dist",
-    "src"
+    "lib"
   ],
   "engines": {
     "node": ">=10"
   },
   "scripts": {
     "backend:start": "node --loader ts-node/esm server.ts",
-    "build:start": "microbundle watch --jsx React.createElement",
+    "backend:build": "node --loader ts-node/esm ./server-lib/buildHandler.ts",
+    "frontend:watch": "microbundle watch --jsx React.createElement",
+    "frontend:build": "microbundle --jsx React.createElement",
     "preview:start": "cd preview && yarn && yarn start",
-    "build": "microbundle --jsx React.createElement",
-    "prepare": "microbundle --jsx React.createElement",
+    "build": "npm run frontend:build && npm run backend:build",
     "size": "size-limit",
     "analyze": "size-limit --why"
   },
@@ -39,6 +40,8 @@
     }
   ],
   "dependencies": {
+    "fs": "^0.0.1-security",
+    "make-dir": "^3.1.0",
     "react-query": "^3.19.1"
   },
   "devDependencies": {

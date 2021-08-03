@@ -16,7 +16,7 @@ function usePlatformMutation(mutationKey: string) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(args),
-    }).then(response => response.json());
+    }).then((response) => response.json());
   });
 }
 
