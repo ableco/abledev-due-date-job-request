@@ -7,7 +7,7 @@ function DueDate() {
   const { isLoading, data } = usePlatformQuery("queries/some-query");
   const createStuffMutation = usePlatformMutation("mutations/create-stuff");
 
-  const [name, setName] = React.useState("");
+  const [name, setName] = React.useState("capitalize me");
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();

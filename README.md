@@ -1,12 +1,9 @@
 ## Plan
 
-1. Figure out how to expose the component and the handler in a way that they can
-   be used by an external project.
-
-2. Move some parts of this project into a package `abledev`. (Maybe use a
+1. Move some parts of this project into a package `abledev`. (Maybe use a
    monorepo?)
 
-3. Create a CLI that can generate this structure.
+2. Create a CLI that can generate this structure.
 
 ## Important things for later:
 
