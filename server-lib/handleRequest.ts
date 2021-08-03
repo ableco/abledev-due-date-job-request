@@ -95,7 +95,9 @@ async function handleBackendFunction(
 export default async function handleRequest(
   request: IncomingMessage,
   response: ServerResponse,
-  { mode = "production" }: { mode: "development" | "production" },
+  { mode = "production" }: { mode: "development" | "production" } = {
+    mode: "production",
+  },
 ) {
   app.set("abledevMode", mode);
   if (mode === "development") {
