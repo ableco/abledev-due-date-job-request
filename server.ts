@@ -1,15 +1,13 @@
 import { createServer } from "http";
 import path from "path";
-import handleRequest from "./server-lib/handleRequest";
+import { createHandleRequest } from "./server-lib/handleRequest";
 import listenOnAvailablePort from "./server-lib/listenOnAvailablePort";
-import watchBackendFunctions from "./server-lib/watchBackendFunctions";
 
 const srcPath = path.join(__dirname, "src");
-
-watchBackendFunctions({ srcPath });
+const handleRequest = createHandleRequest({ mode: "development", srcPath });
 
 const server = createServer((request, response) => {
-  handleRequest(request, response, { mode: "development" });
+  handleRequest(request, response);
 });
 
 listenOnAvailablePort(server, 5000).then((port) => {

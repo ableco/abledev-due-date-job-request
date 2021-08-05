@@ -14,10 +14,8 @@
   "scripts": {
     "backend-functions:serve": "node --loader ts-node/esm server.ts",
     "backend-functions:build": "node --loader ts-node/esm ./server-lib/buildBackendFunctions.ts",
-    "build": "webpack && npm run backend-functions:build",
-    "component:watch": "microbundle watch --jsx React.createElement",
-    "preview:start": "parcel preview.html",
-    "component:build": "microbundle --jsx React.createElement"
+    "build": "npm run backend-functions:build && webpack",
+    "preview:start": "parcel preview.html"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -51,6 +49,7 @@
     "ts-node": "^10.1.0",
     "tslib": "^2.3.0",
     "typescript": "^4.3.5",
+    "uuid": "^8.3.2",
     "webpack": "^5.48.0",
     "webpack-cli": "^4.7.2",
     "webpack-dev-middleware": "^5.0.0",

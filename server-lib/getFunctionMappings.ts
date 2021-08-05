@@ -1,11 +1,11 @@
 import path from "path";
 import glob from "glob";
 
-type FunctionType = "query" | "mutation";
+export type FunctionType = "query" | "mutation";
 
-type FunctionDefinition = {
+export type FunctionDefinition = {
   fileName: string;
-  filePath: string;
+  sourcePath: string;
   productionImportPath?: string;
   functionName: string;
   type: FunctionType;
@@ -31,7 +31,7 @@ function createFunctionsMapping(
 
     mapping[functionName] = {
       fileName,
-      filePath: path.join(srcPath, fileName),
+      sourcePath: path.join(srcPath, fileName),
       functionName,
       type,
     };
