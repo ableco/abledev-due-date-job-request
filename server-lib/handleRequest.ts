@@ -6,6 +6,7 @@ import { IncomingMessage, ServerResponse } from "http";
 import { FunctionMappings } from "./getFunctionMappings";
 import fs from "fs/promises";
 import { pathExists } from "./pathExists";
+import { BACKEND_FUNCTIONS_FOLDER_NAME } from "./buildBackendFunctions";
 
 declare global {
   var FUNCTION_MAPPINGS: FunctionMappings | undefined;
@@ -23,7 +24,12 @@ async function getFunctionMappings(): Promise<{
   sourceType: "json" | "global";
   mappings: FunctionMappings;
 }> {
-  const jsonLocation = path.join(__dirname, "functionMappings.json");
+  const jsonLocation = path.join(
+    __dirname,
+    BACKEND_FUNCTIONS_FOLDER_NAME,
+    "functionMappings.json",
+  );
+
   if (await pathExists(jsonLocation)) {
     return {
       sourceType: "json",
@@ -70,8 +76,20 @@ async function handleBackendFunction(
 
   let backendFunction: unknown;
 
-  if (sourceType === "json" && functionMetadata.compiledFilePath) {
-    backendFunction = (await import(functionMetadata.compiledFilePath)).default;
+  if (sourceType === "json" && functionMetadata.productionImportPath) {
+    const functionLocation = path.resolve(
+      __dirname,
+      `./backend-functions/${functionMetadata.functionName}.js`,
+    );
+
+    try {
+      backendFunction = (await import(functionLocation)).default;
+    } catch (e) {
+      response
+        .status(500)
+        .json("Function in functionLocation could not be required");
+      return;
+    }
   } else {
     if (require.cache[functionMetadata.filePath]) {
       delete require.cache[functionMetadata.filePath];

@@ -8,6 +8,8 @@ import makeDir from "make-dir";
 
 const exec = util.promisify(child_process.exec);
 
+export const BACKEND_FUNCTIONS_FOLDER_NAME = "backend-functions";
+
 async function compileFunctions(
   functionMappings: FunctionMappings,
   distFolderPath: string,
@@ -15,21 +17,21 @@ async function compileFunctions(
   for await (const [_, definition] of Object.entries(functionMappings)) {
     const compiledFilePath = path.join(
       distFolderPath,
-      "backend",
+      BACKEND_FUNCTIONS_FOLDER_NAME,
       definition.fileName,
     );
     const compiledFileDirectory = path.dirname(compiledFilePath);
 
     await makeDir(compiledFileDirectory);
-    await buildTsFile(
-      definition.filePath,
-      compiledFileDirectory,
-      path.parse(definition.filePath).name,
+    await buildTsFile(definition.filePath, compiledFileDirectory);
+
+    const productionImportPath = path.join(
+      "..", // dist
+      BACKEND_FUNCTIONS_FOLDER_NAME, // backend-functions
+      `${definition.functionName}.js`,
     );
-    // NOTE: This assumes a .cjs file exists because that's what microbundle does
-    // but it may not do this in the future, so it'd be better to get this file directly
-    // from the compilation result.
-    definition.compiledFilePath = compiledFilePath.replace(".ts", ".cjs");
+
+    definition.productionImportPath = productionImportPath;
   }
 }
 
@@ -37,41 +39,24 @@ async function createFunctionMappingsFile(
   functionMappings: FunctionMappings,
   distFolderPath: string,
 ) {
-  await fs.writeFile(
-    path.join(distFolderPath, "backend", "functionMappings.json"),
-    JSON.stringify(functionMappings),
-  );
-}
-
-async function buildTsFile(
-  sourceFilePath: string,
-  outputDirectory: string,
-  name: string,
-) {
-  await exec(
-    [
-      "npx microbundle build",
-      `--name ${name}`,
-      `--entry ${sourceFilePath}`,
-      `-o ${outputDirectory}/${name}.js`,
-      "--target node",
-    ].join(" "),
-  );
-}
-
-async function compileHandler(distFolderPath: string) {
-  const handlerSource = path.join(
+  const filePath = path.join(
     distFolderPath,
-    "..",
-    "server-lib",
-    "handleRequest.ts",
+    BACKEND_FUNCTIONS_FOLDER_NAME,
+    "functionMappings.json",
   );
-  const outputDirectory = path.join(distFolderPath, "backend");
 
-  await buildTsFile(handlerSource, outputDirectory, "handleRequest");
+  if (!(await pathExists(filePath))) {
+    await fs.writeFile(filePath, JSON.stringify(functionMappings));
+  }
 }
 
-async function buildHandler() {
+async function buildTsFile(sourceFilePath: string, outputDirectory: string) {
+  await exec(
+    `npx tsc ${sourceFilePath} --outDir ${outputDirectory} --esModuleInterop --declaration`,
+  );
+}
+
+async function buildBackendFunctions() {
   const distFolderPath = path.resolve(__dirname, "..", "dist");
   const srcFolderPath = path.resolve(__dirname, "..", "src");
 
@@ -85,7 +70,6 @@ async function buildHandler() {
 
   await compileFunctions(functionMappings, distFolderPath);
   await createFunctionMappingsFile(functionMappings, distFolderPath);
-  await compileHandler(distFolderPath);
 }
 
-buildHandler();
+buildBackendFunctions();

@@ -6,7 +6,7 @@ type FunctionType = "query" | "mutation";
 type FunctionDefinition = {
   fileName: string;
   filePath: string;
-  compiledFilePath?: string;
+  productionImportPath?: string;
   functionName: string;
   type: FunctionType;
 };

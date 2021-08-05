@@ -1,14 +1,9 @@
 {
   "name": "due-date",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "author": "Julio García",
-  "type": "module",
-  "source": "src/index.tsx",
-  "main": "dist/due-date.cjs",
-  "umd:main": "dist/due-date.umd.js",
-  "module": "dist/due-date.js",
+  "main": "dist/due-date.web",
   "license": "MIT",
-  "typings": "dist/index.d.ts",
   "files": [
     "dist",
     "lib"
@@ -17,35 +12,25 @@
     "node": ">=10"
   },
   "scripts": {
-    "backend:start": "node --loader ts-node/esm server.ts",
-    "backend:build": "node --loader ts-node/esm ./server-lib/buildHandler.ts",
-    "frontend:watch": "microbundle watch --jsx React.createElement",
-    "frontend:build": "microbundle --jsx React.createElement",
+    "backend-functions:serve": "node --loader ts-node/esm server.ts",
+    "backend-functions:build": "node --loader ts-node/esm ./server-lib/buildBackendFunctions.ts",
+    "build": "webpack && npm run backend-functions:build",
+    "component:watch": "microbundle watch --jsx React.createElement",
     "preview:start": "parcel preview.html",
-    "build": "npm run frontend:build && npm run backend:build",
-    "size": "size-limit",
-    "analyze": "size-limit --why"
+    "component:build": "microbundle --jsx React.createElement"
   },
   "peerDependencies": {
     "react": ">=16"
   },
-  "size-limit": [
-    {
-      "path": "dist/due-date.cjs.production.min.js",
-      "limit": "100 KB"
-    },
-    {
-      "path": "dist/due-date.esm.js",
-      "limit": "100 KB"
-    }
-  ],
   "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
     "fs": "^0.0.1-security",
     "make-dir": "^3.1.0",
     "react-query": "^3.19.1"
   },
   "devDependencies": {
-    "@size-limit/preset-small-lib": "^5.0.2",
     "@types/cors": "^2.8.12",
     "@types/express": "^4.17.13",
     "@types/glob": "^7.1.4",
@@ -55,9 +40,6 @@
     "@types/react-dom": "^17.0.9",
     "@types/webpack-dev-middleware": "^5.0.1",
     "chokidar": "^3.5.2",
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "express-async-handler": "^1.1.4",
     "glob": "^7.1.7",
     "html-webpack-plugin": "^5.3.2",
     "microbundle": "^0.13.3",
@@ -65,12 +47,13 @@
     "prettier": "^2.3.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "size-limit": "^5.0.2",
-    "ts-loader": "^9.2.4",
+    "ts-loader": "^9.2.5",
     "ts-node": "^10.1.0",
     "tslib": "^2.3.0",
     "typescript": "^4.3.5",
     "webpack": "^5.48.0",
-    "webpack-dev-middleware": "^5.0.0"
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-middleware": "^5.0.0",
+    "webpack-node-externals": "^3.0.0"
   }
 }
