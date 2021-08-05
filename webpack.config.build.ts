@@ -1,17 +1,13 @@
-const path = require("path");
-const nodeExternals = require("webpack-node-externals");
+import path from "path";
+import nodeExternals from "webpack-node-externals";
 
-function createConfig(target) {
-  if (target !== "node" && target !== "web") {
-    throw new Error("Config target is wrong");
-  }
+const entries = {
+  web: "./src/index.tsx",
+  node: "./server-lib/handleRequest.ts",
+};
 
+function createConfig(target: "node" | "web") {
   const distPath = path.resolve(__dirname, "dist");
-
-  const entries = {
-    web: "./src/index.tsx",
-    node: "./server-lib/handleRequest.ts",
-  };
 
   return {
     mode: "production",
@@ -50,7 +46,6 @@ function createConfig(target) {
           loader: "ts-loader",
           options: {
             compilerOptions: {
-              noEmit: false,
               declaration: true,
               outDir: distPath,
             },
@@ -60,7 +55,7 @@ function createConfig(target) {
       ],
     },
     resolve: {
-      extensions: [".tsx", ".ts", ".js"],
+      extensions: [".ts", ".tsx", ".ts", ".js"],
     },
     optimization: {
       minimize: false,

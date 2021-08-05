@@ -7,14 +7,14 @@ interface ErrorWithCode extends Error {
 
 async function listenOnAvailablePort(
   server: Server,
-  port: number,
+  preferredPort: number,
 ): Promise<number> {
   return new Promise((resolve, reject) => {
     server
       .once("error", (error: ErrorWithCode) => {
         if (error.code === "EADDRINUSE") {
-          port = port + 1;
-          server.listen(port);
+          preferredPort = preferredPort + 1;
+          server.listen(preferredPort);
         } else {
           reject(error);
         }
@@ -22,7 +22,7 @@ async function listenOnAvailablePort(
       .once("listening", () => {
         resolve((server.address() as AddressInfo).port);
       })
-      .listen(port);
+      .listen(preferredPort);
   });
 }
 

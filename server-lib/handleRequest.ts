@@ -5,8 +5,12 @@ import path from "path";
 import mappings from "../backend-functions";
 
 type AppOptions =
-  | { mode: "development"; srcPath: string }
-  | { mode: "production"; srcPath?: never };
+  | {
+      mode: "development";
+      srcPath: string;
+      extendApp?: (app: express.Express) => void;
+    }
+  | { mode: "production"; srcPath?: never; extendApp?: never };
 
 async function handleBackendFunction(
   request: express.Request,
@@ -50,6 +54,10 @@ export function createHandleRequest(appOptions: AppOptions) {
 
   if (appOptions.mode === "development") {
     app.use(cors());
+  }
+
+  if (appOptions.extendApp) {
+    appOptions.extendApp(app);
   }
 
   app.get(

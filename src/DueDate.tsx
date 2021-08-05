@@ -29,7 +29,6 @@ function DueDate() {
             onChange={(event) => {
               setName(event.target.value);
             }}
-            autoFocus
           />
           <button type="submit">Call Mutation</button>
           {createStuffMutation.data ? (

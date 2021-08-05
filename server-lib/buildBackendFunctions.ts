@@ -86,7 +86,10 @@ async function upsertIndexFile(
 
 async function buildTsFile(sourceFilePath: string, outputDirectory: string) {
   await exec(
-    `npx tsc ${sourceFilePath} --outDir ${outputDirectory} --esModuleInterop --declaration`,
+    [
+      `npx tsc ${sourceFilePath} --outDir ${outputDirectory}`,
+      `--esModuleInterop --declaration --skipLibCheck`,
+    ].join(" "),
   );
 }
 
