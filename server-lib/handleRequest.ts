@@ -23,7 +23,7 @@ async function handleBackendFunction(
   let backendFunction: unknown;
 
   if (appOptions.mode === "development") {
-    const functionPath = path.join(appOptions.srcPath, functionName);
+    const functionPath = path.join(appOptions.srcPath, `${functionName}.ts`);
 
     if (require.cache[functionPath]) {
       delete require.cache[functionPath];
@@ -47,7 +47,9 @@ async function handleBackendFunction(
   }
 }
 
-export function createHandleRequest(appOptions: AppOptions) {
+export function createHandleRequest(
+  appOptions: AppOptions = { mode: "production" },
+) {
   const app = express();
 
   app.use(express.json());

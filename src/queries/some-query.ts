@@ -1,3 +1,3 @@
 export default function someQuery() {
-  return { x: 1, y: 2, sum: 3, what: "what?", nope: "nope" };
+  return { x: 1, y: 2, z: 3, a: 5, b: 6, c: 7 };
 }

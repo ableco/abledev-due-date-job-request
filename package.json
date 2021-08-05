@@ -4,10 +4,15 @@
   "author": "Julio García",
   "main": "dist/due-date.web",
   "license": "MIT",
+  "types": "dist/index.d.ts",
   "files": [
     "dist",
     "lib"
   ],
+  "exports": {
+    ".": "./dist/due-date.web.js",
+    "./server-functions": "./dist/due-date.node.js"
+  },
   "engines": {
     "node": ">=10"
   },
