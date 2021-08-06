@@ -1,5 +1,6 @@
 import path from "path";
 import nodeExternals from "webpack-node-externals";
+import createImportTransformer from "./server-lib/createImportTransformer";
 
 const entries = {
   web: "./src/index.tsx",
@@ -48,6 +49,11 @@ function createConfig(target: "node" | "web") {
             compilerOptions: {
               declaration: true,
               outDir: distPath,
+            },
+            getCustomTransformers: () => {
+              return {
+                before: [createImportTransformer()],
+              };
             },
           },
           exclude: /node_modules/,
