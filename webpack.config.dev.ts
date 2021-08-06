@@ -2,6 +2,7 @@ import { Configuration, HotModuleReplacementPlugin } from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
 import ReactRefreshTypeScript from "react-refresh-typescript";
+import createImportTransformer from "./server-lib/createImportTransformer";
 
 const config: Configuration = {
   mode: "development",
@@ -15,7 +16,7 @@ const config: Configuration = {
         options: {
           getCustomTransformers: () => {
             return {
-              before: [ReactRefreshTypeScript()],
+              before: [ReactRefreshTypeScript(), createImportTransformer()],
               transpileOnly: true,
             };
           },

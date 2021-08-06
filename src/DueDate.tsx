@@ -2,10 +2,12 @@ import * as React from "react";
 import usePlatformMutation from "./lib/usePlatformMutation";
 import usePlatformQuery from "./lib/usePlatformQuery";
 import wrapMainComponent from "./lib/wrapMainComponent";
+import someQuery from "./queries/some-query";
+import createStuff from "./mutations/create-stuff";
 
 function DueDate() {
-  const { isLoading, data } = usePlatformQuery("queries/some-query");
-  const createStuffMutation = usePlatformMutation("mutations/create-stuff");
+  const { isLoading, data } = usePlatformQuery(someQuery);
+  const createStuffMutation = usePlatformMutation(createStuff);
 
   const [name, setName] = React.useState("capitalize me");
 
@@ -14,13 +16,13 @@ function DueDate() {
     createStuffMutation.mutate({ name });
   };
 
-  if (isLoading) {
+  if (isLoading || !data) {
     return <p>Loading...</p>;
   } else {
     return (
       <>
         <pre style={{ padding: "1rem" }}>
-          <code>{JSON.stringify(data)}</code>
+          <code>{JSON.stringify(data.data || data.otherData)}</code>
         </pre>
         <form onSubmit={handleSubmit}>
           <input
