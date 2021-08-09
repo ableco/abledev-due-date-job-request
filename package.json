@@ -17,14 +17,16 @@
     "node": ">=10"
   },
   "scripts": {
-    "dev": "node --loader ts-node/esm server.ts",
-    "build-backend-functions": "node --loader ts-node/esm ./server-lib/buildBackendFunctions.ts",
+    "dev": "ts-node ./abledev/server.ts",
+    "build-backend-functions": "build-backend-functions --source-folder-path=${PWD}/src --backend-functions-path=${PWD}/abledev/backend-functions",
     "build": "npm run build-backend-functions && webpack -c webpack.config.build.ts"
   },
   "peerDependencies": {
     "react": ">=16"
   },
   "dependencies": {
+    "@ableco/abledev-dev-environment": "^0.0.1-alpha0",
+    "@ableco/abledev-react": "^0.0.1-alpha0",
     "@types/webpack-hot-middleware": "^2.25.5",
     "cors": "^2.8.5",
     "express": "^4.17.1",

@@ -4,4 +4,5 @@ node_modules
 .cache
 dist
 .parcel-cache
-backend-functions/
+.yalc/
+yalc.lock

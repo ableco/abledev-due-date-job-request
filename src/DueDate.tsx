@@ -1,13 +1,15 @@
 import * as React from "react";
-import usePlatformMutation from "./lib/usePlatformMutation";
-import usePlatformQuery from "./lib/usePlatformQuery";
-import wrapMainComponent from "./lib/wrapMainComponent";
+import {
+  useQuery,
+  useMutation,
+  wrapRootComponent,
+} from "@ableco/abledev-react";
 import someQuery from "./queries/some-query";
 import createStuff from "./mutations/create-stuff";
 
 function DueDate() {
-  const { isLoading, data } = usePlatformQuery(someQuery);
-  const createStuffMutation = usePlatformMutation(createStuff);
+  const { isLoading, data } = useQuery(someQuery);
+  const createStuffMutation = useMutation(createStuff);
 
   const [name, setName] = React.useState("capitalize me");
 
@@ -44,4 +46,4 @@ function DueDate() {
   }
 }
 
-export default wrapMainComponent(DueDate);
+export default wrapRootComponent(DueDate);
