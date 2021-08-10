@@ -26,8 +26,8 @@
   },
   "dependencies": {
     "@ableco/abledev-components": "^0.0.1-alpha15",
-    "@ableco/abledev-dev-environment": "^0.0.1-alpha2",
-    "@ableco/abledev-react": "^0.0.1-alpha4",
+    "@ableco/abledev-dev-environment": "^0.0.1-alpha4",
+    "@ableco/abledev-react": "^0.0.1-alpha6",
     "@types/webpack-hot-middleware": "^2.25.5",
     "cors": "^2.8.5",
     "express": "^4.17.1",

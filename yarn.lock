@@ -14,10 +14,10 @@
     react-popper "^2.2.5"
     uuid "^8.0.0"
 
-"@ableco/abledev-dev-environment@^0.0.1-alpha2":
-  version "0.0.1-alpha2"
-  resolved "https://registry.able.co/@ableco%2fabledev-dev-environment/-/abledev-dev-environment-0.0.1-alpha2.tgz#2bc0d9435f5d6739aad902424a6b17202676df69"
-  integrity sha512-JjJHUNdJ0T5UImMUVMcYixh/hxWJe75jsSIyJIrDjFtdvwc9bgANw+mOFjSKoshwm4B+07B4YiIptJqHsAf7YA==
+"@ableco/abledev-dev-environment@^0.0.1-alpha4":
+  version "0.0.1-alpha4"
+  resolved "https://registry.able.co/@ableco%2fabledev-dev-environment/-/abledev-dev-environment-0.0.1-alpha4.tgz#269aec2727044c132652e16e48e64c9dc4b86027"
+  integrity sha512-I9h6SI6siFqfA8DpF4RkgYb//zYL4JPJi8tiwoCfoqzanFTJWyBfeRYdIicuh/KWYwfJIshzvyYxogXPXjYFcg==
   dependencies:
     "@types/glob" "^7.1.4"
     "@types/minimist" "^1.2.2"
@@ -30,16 +30,18 @@
     make-dir "^3.1.0"
     minimist "^1.2.5"
     shebang-loader "^0.0.1"
+    superjson "^1.7.5"
     webpack-dev-middleware "^5.0.0"
     webpack-hot-middleware "^2.25.0"
     webpack-merge "^5.8.0"
 
-"@ableco/abledev-react@^0.0.1-alpha4":
-  version "0.0.1-alpha4"
-  resolved "https://registry.able.co/@ableco%2fabledev-react/-/abledev-react-0.0.1-alpha4.tgz#a3a5a607d4fda9ea9b0aca41f2e8f10b20053100"
-  integrity sha512-ma/7kXkLrfFdWBOqofvgGBc0moI7f56JOplJbHtSBBaM8fjC0e6W5ssjr86GZU4+r1WK+bBmY6hxwoCKnD3J5Q==
+"@ableco/abledev-react@^0.0.1-alpha6":
+  version "0.0.1-alpha6"
+  resolved "https://registry.able.co/@ableco%2fabledev-react/-/abledev-react-0.0.1-alpha6.tgz#6ed517522a72835f667c4674c3b6ef074cd97894"
+  integrity sha512-/bsme49jC3RsIoN30x1ePMzjQ3pP1gV1KrS5lUvIJ99IA6qmaFtQUETn/hIqnLHuiQjLVq2GpJvrAf737mOrSg==
   dependencies:
     react-query "^3.19.2"
+    superjson "^1.7.5"
 
 "@babel/code-frame@^7.0.0":
   version "7.14.5"
@@ -1022,6 +1024,13 @@ debug@2.6.9:
   dependencies:
     ms "2.0.0"
 
+debug@^4.3.1:
+  version "4.3.2"
+  resolved "https://registry.able.co/debug/-/debug-4.3.2.tgz#f0a49c18ac8779e31d4a0c6029dfb76873c7428b"
+  integrity sha512-mOp8wKcvj7XxC78zLgw/ZA+6TSgkoE2C/ienthhRD298T7UNwAg9diBpLRxC0mOezLl4B0xV7M0cCO6P/O0Xhw==
+  dependencies:
+    ms "2.1.2"
+
 defined@^1.0.0:
   version "1.0.0"
   resolved "https://registry.able.co/defined/-/defined-1.0.0.tgz#c98d9bcef75674188e110969151199e39b1fa693"
@@ -1736,6 +1745,11 @@ locate-path@^5.0.0:
   dependencies:
     p-locate "^4.1.0"
 
+lodash.clonedeep@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.able.co/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz#e23f3f9c4f8fbdde872529c1071857a086e5ccef"
+  integrity sha1-4j8/nE+Pvd6HJSnBBxhXoIblzO8=
+
 lodash.toarray@^4.4.0:
   version "4.4.0"
   resolved "https://registry.able.co/lodash.toarray/-/lodash.toarray-4.4.0.tgz#24c4bfcd6b2fba38bfd0594db1179d8e9b656561"
@@ -1905,6 +1919,11 @@ ms@2.1.1:
   version "2.1.1"
   resolved "https://registry.npmjs.org/ms/-/ms-2.1.1.tgz"
   integrity sha512-tgp+dl5cGk28utYktBsrFqA7HKgrhgPsg6Z/EfhWI4gl1Hwq8B/GmY/0oXZ6nF8hDVesS/FpnYaD/kOWhYQvyg==
+
+ms@2.1.2:
+  version "2.1.2"
+  resolved "https://registry.able.co/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
+  integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
 
 nano-time@1.0.0:
   version "1.0.0"
@@ -2924,6 +2943,14 @@ style-loader@^3.2.1:
   version "3.2.1"
   resolved "https://registry.able.co/style-loader/-/style-loader-3.2.1.tgz#63cb920ec145c8669e9a50e92961452a1ef5dcde"
   integrity sha512-1k9ZosJCRFaRbY6hH49JFlRB0fVSbmnyq1iTPjNxUmGVjBNEmwrrHPenhlp+Lgo51BojHSf6pl2FcqYaN3PfVg==
+
+superjson@^1.7.5:
+  version "1.7.5"
+  resolved "https://registry.able.co/superjson/-/superjson-1.7.5.tgz#596d080fd3c010f6d991c53a292c03704f160649"
+  integrity sha512-AHuFroOcMTK6LdG/irwXIHwH6Gof5nh42iywnhhf7hMZ6UJqFDRtJ82ViJg14UX3AG8vWRf4Dh3oPIJcqu16Nw==
+  dependencies:
+    debug "^4.3.1"
+    lodash.clonedeep "^4.5.0"
 
 supports-color@^5.3.0:
   version "5.5.0"
