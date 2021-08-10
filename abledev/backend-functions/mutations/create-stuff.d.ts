@@ -1,6 +1,5 @@
-import express from "express";
-export default function createStuff({ request }: {
-    request: express.Request;
+export default function createStuff(input: {
+    name: string;
 }): {
     allUppercasedName: string;
 };
