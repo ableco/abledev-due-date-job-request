@@ -4,6 +4,7 @@ import { DatePicker } from "@ableco/abledev-components";
 import updateDueDate from "./mutations/updateDueDate";
 import { Task } from "./host-types";
 import { format } from "date-fns";
+import "./index.css";
 
 function DueDate({ task }: { task: Task }) {
   const updateDateMutation = useMutation(updateDueDate);

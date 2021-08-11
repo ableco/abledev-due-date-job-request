@@ -11,7 +11,8 @@
   ],
   "exports": {
     ".": "./dist/due-date.web.js",
-    "./server-functions": "./dist/due-date.node.js"
+    "./server-functions": "./dist/due-date.node.js",
+    "./styles.css": "./dist/main.css"
   },
   "engines": {
     "node": ">=10"
@@ -26,7 +27,7 @@
   },
   "dependencies": {
     "@ableco/abledev-components": "^0.0.1-alpha17",
-    "@ableco/abledev-dev-environment": "^0.0.1-alpha10",
+    "@ableco/abledev-dev-environment": "^0.0.1-alpha11",
     "@ableco/abledev-react": "^0.0.1-alpha6",
     "@types/webpack-hot-middleware": "^2.25.5",
     "cors": "^2.8.5",

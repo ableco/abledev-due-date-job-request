@@ -3,10 +3,6 @@ import * as ReactDOM from "react-dom";
 import { DueDate } from "../src";
 // This assumes the host project already has @ableco/abledev-components loaded
 import "@ableco/abledev-components/dist/style.css";
-// This assumes the host project already has tailwind styles loaded
-// This has the problem this is not loading the __real__ tailwind config
-// of the host project.
-import "./index.css";
 
 const App = () => {
   return (
@@ -18,6 +14,10 @@ const App = () => {
           updatedAt: new Date(),
           description: "Brush Teeth",
           creatorId: 1,
+          dueDate: null,
+          completedAt: null,
+          assignedUserId: null,
+          assignedUser: null,
         }}
       />
       <DueDate
@@ -25,9 +25,12 @@ const App = () => {
           id: 1,
           createdAt: new Date(),
           updatedAt: new Date(),
-          dueDate: new Date(),
           description: "Brush Teeth",
           creatorId: 1,
+          dueDate: new Date(),
+          completedAt: null,
+          assignedUserId: null,
+          assignedUser: null,
         }}
       />
     </div>

@@ -4,11 +4,11 @@ export type Task = {
   createdAt: Date;
   updatedAt: Date;
   description: string;
-  dueDate?: Date;
-  completedAt?: Date;
-  assignedUserId?: number;
+  dueDate: Date | null;
+  completedAt: Date | null;
+  assignedUserId: number | null;
   creatorId: number;
-  assignedUser?: {
-    picture?: string;
-  };
+  assignedUser: {
+    picture: string | null;
+  } | null;
 };

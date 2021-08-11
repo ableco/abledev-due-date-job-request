@@ -14,10 +14,10 @@
     react-popper "^2.2.5"
     uuid "^8.0.0"
 
-"@ableco/abledev-dev-environment@^0.0.1-alpha10":
-  version "0.0.1-alpha10"
-  resolved "https://registry.able.co/@ableco%2fabledev-dev-environment/-/abledev-dev-environment-0.0.1-alpha10.tgz#c6137038e8f897021804d02f988f9ad621ff48ba"
-  integrity sha512-nW69lBCqi30b7sABJ4D7IyxWzw1mP2rhCE64UGjaILWDLMPLLykKiuyHCrgGm8EYOuTIFd+8eyzHOhLMPjztdg==
+"@ableco/abledev-dev-environment@^0.0.1-alpha11":
+  version "0.0.1-alpha11"
+  resolved "https://registry.able.co/@ableco%2fabledev-dev-environment/-/abledev-dev-environment-0.0.1-alpha11.tgz#65fb051a5780b5bd9695f6df89c4b68ceb6af847"
+  integrity sha512-bwx0MClddILVLU48BL8jx2Zjj6L7EbJUUwFb9utQIg0EeUMPYAla418LZI0SdeYgeqQ6PODSUhCKF9pp5GRr9g==
   dependencies:
     "@pmmmwh/react-refresh-webpack-plugin" "^0.4.3"
     "@types/glob" "^7.1.4"
@@ -31,6 +31,7 @@
     glob "^7.1.7"
     html-webpack-plugin "^5.3.2"
     make-dir "^3.1.0"
+    mini-css-extract-plugin "^2.2.0"
     minimist "^1.2.5"
     postcss-loader "^6.1.1"
     react-refresh-typescript "^2.0.2"
@@ -1899,6 +1900,13 @@ mimic-fn@^3.1.0:
   version "3.1.0"
   resolved "https://registry.npmjs.org/mimic-fn/-/mimic-fn-3.1.0.tgz"
   integrity sha512-Ysbi9uYW9hFyfrThdDEQuykN4Ey6BuwPD2kpI5ES/nFTDn/98yxYNLZJcgUAKPT/mcrLLKaGzJR9YVxJrIdASQ==
+
+mini-css-extract-plugin@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.able.co/mini-css-extract-plugin/-/mini-css-extract-plugin-2.2.0.tgz#48cb6d2bea8fa9eb36709856e003662eebb3eb92"
+  integrity sha512-91HeVHbq7PUJ4TwOuMTlFWfVWrLqf3SF0PlEDPV+wtgsfxrMebN9LLzflyQqdKLp4/H3PexRB1WLKsCqpWKkxQ==
+  dependencies:
+    schema-utils "^3.1.0"
 
 minimatch@^3.0.4:
   version "3.0.4"
