@@ -14,26 +14,33 @@
     react-popper "^2.2.5"
     uuid "^8.0.0"
 
-"@ableco/abledev-dev-environment@^0.0.1-alpha4":
-  version "0.0.1-alpha4"
-  resolved "https://registry.able.co/@ableco%2fabledev-dev-environment/-/abledev-dev-environment-0.0.1-alpha4.tgz#269aec2727044c132652e16e48e64c9dc4b86027"
-  integrity sha512-I9h6SI6siFqfA8DpF4RkgYb//zYL4JPJi8tiwoCfoqzanFTJWyBfeRYdIicuh/KWYwfJIshzvyYxogXPXjYFcg==
+"@ableco/abledev-dev-environment@^0.0.1-alpha10":
+  version "0.0.1-alpha10"
+  resolved "https://registry.able.co/@ableco%2fabledev-dev-environment/-/abledev-dev-environment-0.0.1-alpha10.tgz#c6137038e8f897021804d02f988f9ad621ff48ba"
+  integrity sha512-nW69lBCqi30b7sABJ4D7IyxWzw1mP2rhCE64UGjaILWDLMPLLykKiuyHCrgGm8EYOuTIFd+8eyzHOhLMPjztdg==
   dependencies:
+    "@pmmmwh/react-refresh-webpack-plugin" "^0.4.3"
     "@types/glob" "^7.1.4"
     "@types/minimist" "^1.2.2"
     "@types/webpack-dev-middleware" "^5.0.2"
     "@types/webpack-hot-middleware" "^2.25.5"
     cors "^2.8.5"
+    css-loader "^6.2.0"
     express "^4.17.1"
     express-async-handler "^1.1.4"
     glob "^7.1.7"
+    html-webpack-plugin "^5.3.2"
     make-dir "^3.1.0"
     minimist "^1.2.5"
+    postcss-loader "^6.1.1"
+    react-refresh-typescript "^2.0.2"
     shebang-loader "^0.0.1"
+    style-loader "^3.2.1"
     superjson "^1.7.5"
     webpack-dev-middleware "^5.0.0"
     webpack-hot-middleware "^2.25.0"
     webpack-merge "^5.8.0"
+    webpack-node-externals "^3.0.0"
 
 "@ableco/abledev-react@^0.0.1-alpha6":
   version "0.0.1-alpha6"
