@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@ableco/abledev-components@^0.0.1-alpha15":
-  version "0.0.1-alpha15"
-  resolved "https://registry.able.co/@ableco%2fabledev-components/-/abledev-components-0.0.1-alpha15.tgz#48b03dbb69a99de7c8489523feaee078ccff9f92"
-  integrity sha512-f6zJ4Pz4yDd9lXsCBqr5oUV9LFNKUKXgmflw76JbHNL+lTyxpvUR/PY9q/oRg51iXaKZdCO9HmJcZAOWrGkORg==
+"@ableco/abledev-components@^0.0.1-alpha17":
+  version "0.0.1-alpha17"
+  resolved "https://registry.able.co/@ableco%2fabledev-components/-/abledev-components-0.0.1-alpha17.tgz#590fcedc1bdc29605f00710673bd3a595b0d10a5"
+  integrity sha512-id5i8ePRlazwRFxWotTNZPE2R30a4yPOq6EqOKrCGk0rrCbdmPT4q2wCjKIDdttOKzrpIjejf5+nJVqk8rshmg==
   dependencies:
     "@headlessui/react" "^1.3.0"
     "@popperjs/core" "^2.9.2"
