@@ -10,8 +10,26 @@ import "./index.css";
 
 const App = () => {
   return (
-    <div className="p-8">
-      <DueDate date={new Date()} />
+    <div className="p-8 inline-flex flex-col gap-4">
+      <DueDate
+        task={{
+          id: 1,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          description: "Brush Teeth",
+          creatorId: 1,
+        }}
+      />
+      <DueDate
+        task={{
+          id: 1,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          dueDate: new Date(),
+          description: "Brush Teeth",
+          creatorId: 1,
+        }}
+      />
     </div>
   );
 };

@@ -1,3 +1,3 @@
-export default function updateDueDate(input: { date: string }) {
+export default function updateDueDate(input: { date: Date }) {
   return { input };
 }
