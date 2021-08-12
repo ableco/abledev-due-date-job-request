@@ -1,8 +1,5 @@
-*.log
-.DS_Store
 node_modules
-.cache
-dist
-.parcel-cache
-.yalc/
-yalc.lock
+.env
+.yalc
+dist/
+yarn-error.log

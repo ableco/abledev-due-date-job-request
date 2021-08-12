@@ -27,8 +27,9 @@
   },
   "dependencies": {
     "@ableco/abledev-components": "^0.0.1-alpha17",
-    "@ableco/abledev-dev-environment": "^0.0.1-alpha11",
+    "@ableco/abledev-dev-environment": "^0.0.1-alpha13",
     "@ableco/abledev-react": "^0.0.1-alpha7",
+    "@prisma/client": "2.29.0",
     "@types/webpack-hot-middleware": "^2.25.5",
     "cors": "^2.8.5",
     "date-fns": "^2.23.0",
@@ -54,6 +55,7 @@
     "postcss-loader": "^6.1.1",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.3.2",
+    "prisma": "2.29.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-refresh": "^0.10.0",
