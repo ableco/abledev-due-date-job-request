@@ -1,0 +1,11 @@
+#!/bin/sh
+
+yarn build && yalc publish
+
+cd ../doable
+yalc add due-date
+rm -rf node_modules
+rm -rf .blitz
+yarn install --frozen-lockfile --verbose
+
+cd ../abledev-due-date-job-request

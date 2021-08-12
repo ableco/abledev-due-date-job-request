@@ -11,7 +11,10 @@
   "typings": "dist/index.d.ts",
   "files": [
     "dist",
-    "lib"
+    "lib",
+    "install.js",
+    "install.js.map",
+    "prisma"
   ],
   "engines": {
     "node": ">=10"
@@ -22,9 +25,11 @@
     "frontend:watch": "microbundle watch --jsx React.createElement",
     "frontend:build": "microbundle --jsx React.createElement",
     "preview:start": "parcel preview.html",
-    "build": "npm run frontend:build && npm run backend:build",
+    "lib:build": "microbundle --target node -i migrations-lib/insert.ts -o install.js --no-pkg-main -f esm",
+    "build": "npm run frontend:build && npm run backend:build && npm run lib:build",
     "size": "size-limit",
-    "analyze": "size-limit --why"
+    "analyze": "size-limit --why",
+    "install": "node install.js"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -42,7 +47,8 @@
   "dependencies": {
     "fs": "^0.0.1-security",
     "make-dir": "^3.1.0",
-    "react-query": "^3.19.1"
+    "react-query": "^3.19.1",
+    "shelljs": "^0.8.4"
   },
   "devDependencies": {
     "@size-limit/preset-small-lib": "^5.0.2",
@@ -53,6 +59,7 @@
     "@types/prettier": "^2.3.2",
     "@types/react": "^17.0.15",
     "@types/react-dom": "^17.0.9",
+    "@types/shelljs": "^0.8.9",
     "@types/webpack-dev-middleware": "^5.0.1",
     "chokidar": "^3.5.2",
     "cors": "^2.8.5",
@@ -63,6 +70,8 @@
     "microbundle": "^0.13.3",
     "parcel": "2.0.0-rc.0",
     "prettier": "^2.3.2",
+    "prettier-plugin-prisma": "^2.28.0",
+    "prisma": "2.28.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "size-limit": "^5.0.2",
