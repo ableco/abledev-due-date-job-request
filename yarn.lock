@@ -43,10 +43,10 @@
     webpack-merge "^5.8.0"
     webpack-node-externals "^3.0.0"
 
-"@ableco/abledev-react@^0.0.1-alpha6":
-  version "0.0.1-alpha6"
-  resolved "https://registry.able.co/@ableco%2fabledev-react/-/abledev-react-0.0.1-alpha6.tgz#6ed517522a72835f667c4674c3b6ef074cd97894"
-  integrity sha512-/bsme49jC3RsIoN30x1ePMzjQ3pP1gV1KrS5lUvIJ99IA6qmaFtQUETn/hIqnLHuiQjLVq2GpJvrAf737mOrSg==
+"@ableco/abledev-react@^0.0.1-alpha7":
+  version "0.0.1-alpha7"
+  resolved "https://registry.able.co/@ableco%2fabledev-react/-/abledev-react-0.0.1-alpha7.tgz#74a930abf91289ffd559763f452454e463977e52"
+  integrity sha512-Fz9KDagQQ0HgfLq1A6Zku96UQmCEJobb//bW3jaPt9CPqMFhaTcD5cJejKEmXKYgQKL5e12mQwPO+HQ63ZMjtg==
   dependencies:
     react-query "^3.19.2"
     superjson "^1.7.5"
@@ -622,6 +622,18 @@ array-flatten@1.1.1:
   resolved "https://registry.npmjs.org/array-flatten/-/array-flatten-1.1.1.tgz"
   integrity sha1-ml9pkFGx5wczKPKgCJaLZOopVdI=
 
+autoprefixer@^10.3.1:
+  version "10.3.1"
+  resolved "https://registry.able.co/autoprefixer/-/autoprefixer-10.3.1.tgz#954214821d3aa06692406c6a0a9e9d401eafbed2"
+  integrity sha512-L8AmtKzdiRyYg7BUXJTzigmhbQRCXFKz6SA1Lqo0+AR2FBbQ4aTAPFSDlOutnFkjhiz8my4agGXog1xlMjPJ6A==
+  dependencies:
+    browserslist "^4.16.6"
+    caniuse-lite "^1.0.30001243"
+    colorette "^1.2.2"
+    fraction.js "^4.1.1"
+    normalize-range "^0.1.2"
+    postcss-value-parser "^4.1.0"
+
 autoprefixer@^9.6.1:
   version "9.8.6"
   resolved "https://registry.able.co/autoprefixer/-/autoprefixer-9.8.6.tgz#3b73594ca1bf9266320c5acf1588d74dea74210f"
@@ -700,7 +712,7 @@ broadcast-channel@^3.4.1:
     rimraf "3.0.2"
     unload "2.2.0"
 
-browserslist@^4.12.0, browserslist@^4.6.4:
+browserslist@^4.12.0, browserslist@^4.16.6, browserslist@^4.6.4:
   version "4.16.7"
   resolved "https://registry.able.co/browserslist/-/browserslist-4.16.7.tgz#108b0d1ef33c4af1b587c54f390e7041178e4335"
   integrity sha512-7I4qVwqZltJ7j37wObBe3SoTz+nS8APaNcrBOlgoirb6/HbEU2XxW/LpUDTCngM6iauwFqmRTuOMfyKnFGY5JA==
@@ -759,6 +771,11 @@ caniuse-lite@^1.0.30001219:
   version "1.0.30001248"
   resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001248.tgz"
   integrity sha512-NwlQbJkxUFJ8nMErnGtT0QTM2TJ33xgz4KXJSMIrjXIbDVdaYueGyjOrLKRtJC+rTiWfi6j5cnZN1NBiSBJGNw==
+
+caniuse-lite@^1.0.30001243:
+  version "1.0.30001251"
+  resolved "https://registry.able.co/caniuse-lite/-/caniuse-lite-1.0.30001251.tgz#6853a606ec50893115db660f82c094d18f096d85"
+  integrity sha512-HOe1r+9VkU4TFmnU70z+r7OLmtR+/chB1rdcJUeQlAinjEeb0cKL20tlAtOagNZhbrtLnCvV19B4FmF1rgzl6A==
 
 chalk@^2.0.0, chalk@^2.4.2:
   version "2.4.2"
@@ -1361,6 +1378,11 @@ forwarded@0.2.0:
   version "0.2.0"
   resolved "https://registry.npmjs.org/forwarded/-/forwarded-0.2.0.tgz"
   integrity sha512-buRG0fpBtRHSTCOASe6hD258tEubFoRLb4ZNA6NxMVHNw2gOcwHo9wyablzMzOA5z9xA9L1KNjk/Nt6MT9aYow==
+
+fraction.js@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.able.co/fraction.js/-/fraction.js-4.1.1.tgz#ac4e520473dae67012d618aab91eda09bcb400ff"
+  integrity sha512-MHOhvvxHTfRFpF1geTK9czMIZ6xclsEor2wkIGYYq+PxcQqT7vStJqjhe6S1TenZrMZzo+wlqOufBDVepUEgPg==
 
 fresh@0.5.2:
   version "0.5.2"
