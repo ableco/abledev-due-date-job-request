@@ -4,7 +4,7 @@
   "author": "Julio García",
   "main": "dist/due-date.web",
   "license": "MIT",
-  "types": "dist/index.d.ts",
+  "types": "dist/src/index.d.ts",
   "files": [
     "dist",
     "lib"
@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "@ableco/abledev-components": "^0.0.1-alpha17",
-    "@ableco/abledev-dev-environment": "^0.0.1-alpha16",
+    "@ableco/abledev-dev-environment": "^0.0.1-alpha17",
     "@ableco/abledev-react": "^0.0.1-alpha7",
     "@prisma/client": "2.29.0",
     "@types/webpack-hot-middleware": "^2.25.5",

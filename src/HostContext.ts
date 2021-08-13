@@ -1,11 +1,11 @@
-import express from "express";
 import { PrismaClient } from "@prisma/client";
+import express from "express";
 
 export interface HostContext {
   db: PrismaClient;
 }
 
-export interface RequestHostContext extends HostContext {
+export type RequestHostContext = HostContext & {
   request: express.Request;
   response: express.Response;
-}
+};

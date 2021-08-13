@@ -1,5 +1,5 @@
 import { AsyncReturnType } from "type-fest";
-import { HostContext } from "../HostContext";
+import { HostContext } from "../src/HostContext";
 
 async function getPreviewData({ db }: HostContext) {
   const allTasks = await db.task.findMany({});

@@ -1,6 +1,6 @@
-import * as React from "react";
 // This assumes the host project already has @ableco/abledev-components loaded
 import "@ableco/abledev-components/dist/style.css";
+import * as React from "react";
 import { DueDate } from "../src";
 import { PreviewData } from "./getPreviewData";
 

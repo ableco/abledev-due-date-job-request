@@ -1,9 +1,9 @@
+import setDate from "date-fns/setDate";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
+import superjson from "superjson";
 import { PreviewData } from "./getPreviewData";
 import Preview from "./preview";
-import superjson from "superjson";
-import setDate from "date-fns/setDate";
 
 function PreviewApp() {
   const [isLoading, setIsLoading] = React.useState(true);

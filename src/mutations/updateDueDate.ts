@@ -1,4 +1,4 @@
-import { RequestHostContext } from "../../HostContext";
+import { RequestHostContext } from "../HostContext";
 
 export default async function updateDueDate(
   { id, date }: { id: number; date: Date },

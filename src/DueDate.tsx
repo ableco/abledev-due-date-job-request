@@ -1,10 +1,10 @@
-import * as React from "react";
-import { useMutation, wrapRootComponent } from "@ableco/abledev-react";
 import { DatePicker } from "@ableco/abledev-components";
-import updateDueDate from "./mutations/updateDueDate";
-import { Task } from "./host-types";
+import { useMutation, wrapRootComponent } from "@ableco/abledev-react";
+import { Task } from "@prisma/client";
 import { format } from "date-fns";
+import * as React from "react";
 import "./index.css";
+import updateDueDate from "./mutations/updateDueDate";
 
 function DueDate({ task, onSuccess }: { task: Task; onSuccess: () => void }) {
   const updateDateMutation = useMutation(updateDueDate);

@@ -14,10 +14,10 @@
     react-popper "^2.2.5"
     uuid "^8.0.0"
 
-"@ableco/abledev-dev-environment@^0.0.1-alpha16":
-  version "0.0.1-alpha16"
-  resolved "https://registry.able.co/@ableco%2fabledev-dev-environment/-/abledev-dev-environment-0.0.1-alpha16.tgz#a7c9267fd791a50b8eb4d0a76129d7e6a1c2fac4"
-  integrity sha512-ZHYsyc7rIMqE7OCJfWEV+TxD5QmO6yMP14SGAfV84OMjpEYogt5LZmr3pkBpUTkeYScHYKy/S9LTGBbwyY5TWg==
+"@ableco/abledev-dev-environment@^0.0.1-alpha17":
+  version "0.0.1-alpha17"
+  resolved "https://registry.able.co/@ableco%2fabledev-dev-environment/-/abledev-dev-environment-0.0.1-alpha17.tgz#850e07ed785f62cc00a13065093bb38bedf294f9"
+  integrity sha512-PjZLqf1yHgIEFiBmNencmI5XBSmqqtYp6kL/T7woy1XZIqmicxX318QcpK1TEAA3rvmwiz5e3bp5o2mjohptUA==
   dependencies:
     "@pmmmwh/react-refresh-webpack-plugin" "^0.4.3"
     "@types/glob" "^7.1.4"
