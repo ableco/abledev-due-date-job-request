@@ -1,8 +1,8 @@
-import type { HostContext } from "../../HostContext";
+import { RequestHostContext } from "../../HostContext";
 
 export default async function updateDueDate(
   { id, date }: { id: number; date: Date },
-  { db }: HostContext,
+  { db }: RequestHostContext,
 ) {
   const currentTask = await db.task.findUnique({
     where: { id },

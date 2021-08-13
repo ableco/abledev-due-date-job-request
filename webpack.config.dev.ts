@@ -1,6 +1,6 @@
+import path from "path";
 import { createWebpackDevConfig } from "@ableco/abledev-dev-environment";
 
 export default createWebpackDevConfig({
-  entry: "./preview/index.tsx",
-  template: "./preview/index.html",
+  previewFolderPath: path.resolve(__dirname, "./preview"),
 });

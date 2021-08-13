@@ -1,40 +1,37 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { DueDate } from "../src";
-// This assumes the host project already has @ableco/abledev-components loaded
-import "@ableco/abledev-components/dist/style.css";
+import { PreviewData } from "./getPreviewData";
+import Preview from "./preview";
 
-const App = () => {
-  return (
-    <div className="p-8 inline-flex flex-col gap-4">
-      <DueDate
-        task={{
-          id: 1,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-          description: "Brush Teeth",
-          creatorId: 1,
-          dueDate: null,
-          completedAt: null,
-          assignedUserId: null,
-          assignedUser: null,
-        }}
-      />
-      <DueDate
-        task={{
-          id: 1,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-          description: "Brush Teeth",
-          creatorId: 1,
-          dueDate: new Date(),
-          completedAt: null,
-          assignedUserId: null,
-          assignedUser: null,
-        }}
-      />
-    </div>
-  );
-};
+// TODO: Move to somewhere inside @ableco/abledev-dev-environment
+//
+//    import { PreviewApp }...;
+//    <PreviewApp<PreviewData> previewComponent={Preview} />
+//
 
-ReactDOM.render(<App />, document.getElementById("root"));
+// This uses just plain old useEffect + fetch because we don't want to include react-query
+// as a direct dependency because 2 running versions of react-query (the direct dependency +
+// the transient dependency in @ableco/abledev-react) won't work together and it can be confusing
+// and error-prone to have both available at the same time.
+function PreviewApp() {
+  const [isLoading, setIsLoading] = React.useState(true);
+  const [data, setData] = React.useState<PreviewData>();
+
+  React.useEffect(() => {
+    async function loadData() {
+      const response = await fetch("/dev/preview-data");
+      const responseData = await response.json();
+      setData(responseData);
+      setIsLoading(false);
+    }
+    loadData();
+  }, []);
+
+  if (isLoading || data === undefined) {
+    return <div>Loading...</div>;
+  } else {
+    return <Preview data={data} />;
+  }
+}
+
+ReactDOM.render(<PreviewApp />, document.getElementById("root"));

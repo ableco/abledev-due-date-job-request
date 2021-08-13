@@ -1,4 +1,4 @@
-import backendFunction_0 from "./mutations/updateDueDate";
+import backendFunction_0 from "./src/mutations/updateDueDate";
 
 const mappings = {
   "mutations/updateDueDate": backendFunction_0,

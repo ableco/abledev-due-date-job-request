@@ -14,10 +14,10 @@
     react-popper "^2.2.5"
     uuid "^8.0.0"
 
-"@ableco/abledev-dev-environment@^0.0.1-alpha13":
-  version "0.0.1-alpha13"
-  resolved "https://registry.able.co/@ableco%2fabledev-dev-environment/-/abledev-dev-environment-0.0.1-alpha13.tgz#d208ceb15695e9f7cdc9e4f26991fd137e1db8d1"
-  integrity sha512-nKjYaNMb3DH+pTI4fY+6Qd/P9AyDvYiHGP32fQwBsTgNXyCBH2SEskG1lY0i5MJJETMMqe7YkZR8usZjo973kw==
+"@ableco/abledev-dev-environment@^0.0.1-alpha15":
+  version "0.0.1-alpha15"
+  resolved "https://registry.able.co/@ableco%2fabledev-dev-environment/-/abledev-dev-environment-0.0.1-alpha15.tgz#ed9a99757d566d736b77d5d000beb2d5bdda4813"
+  integrity sha512-HA96mP7wCBKHvIBzUdpYSvjrDY43ttEE0FycEGFLbsXCKIkKsa9JQ09DKguPxBRvPFzZ5pJzYQs1XxI3gEcsYg==
   dependencies:
     "@pmmmwh/react-refresh-webpack-plugin" "^0.4.3"
     "@types/glob" "^7.1.4"
@@ -3207,10 +3207,10 @@ tslib@^2.0.3:
   resolved "https://registry.npmjs.org/tslib/-/tslib-2.3.0.tgz"
   integrity sha512-N82ooyxVNm6h1riLCoyS9e3fuJ3AMG2zIZs2Gd1ATcSFjSA23Q0fzjjZeh0jbJvWVDZ0cJT8yaNNaaXHzueNjg==
 
-type-fest@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-1.3.0.tgz#6be848243853df1173fa95530112e1358ab0810b"
-  integrity sha512-mYUYkAy6fPatVWtUeCV/qGeGL3IVucmdJOzeAEfwgCJDx8gP0JaW8jn6KQ5xDfPec31e0KXWn5EUOZMhquR1zA==
+type-fest@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.able.co/type-fest/-/type-fest-2.0.0.tgz#e9daf5615e89f6d430f34117f88f4ee2cd5a2725"
+  integrity sha512-BoEUnckjP9oiudy3KxlGdudtBAdJQ74Wp7dYwVPkUzBn+cVHOsBXh2zD2jLyqgbuJ1KMNriczZCI7lTBA94dFg==
 
 type-is@~1.6.17, type-is@~1.6.18:
   version "1.6.18"

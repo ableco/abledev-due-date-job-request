@@ -6,7 +6,7 @@ import { Task } from "./host-types";
 import { format } from "date-fns";
 import "./index.css";
 
-function DueDate({ task }: { task: Task }) {
+function DueDate({ task, onSuccess }: { task: Task; onSuccess: () => void }) {
   const updateDateMutation = useMutation(updateDueDate);
 
   return (

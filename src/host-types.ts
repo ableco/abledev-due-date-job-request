@@ -8,7 +8,4 @@ export type Task = {
   completedAt: Date | null;
   assignedUserId: number | null;
   creatorId: number;
-  assignedUser: {
-    picture: string | null;
-  } | null;
 };
