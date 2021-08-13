@@ -2,9 +2,8 @@ import { AsyncReturnType } from "type-fest";
 import { HostContext } from "../HostContext";
 
 async function getPreviewData({ db }: HostContext) {
-  return {
-    allTasks: await db.task.findMany({}),
-  };
+  const allTasks = await db.task.findMany({});
+  return { allTasks };
 }
 
 export type PreviewData = AsyncReturnType<typeof getPreviewData>;

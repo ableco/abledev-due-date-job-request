@@ -18,7 +18,7 @@
     "node": ">=10"
   },
   "scripts": {
-    "dev": "ts-node ./abledev/server.ts",
+    "dev": "ts-node ./abledev/devServer.ts",
     "build-backend-functions": "build-backend-functions --source-folder-path=${PWD}/src --backend-functions-path=${PWD}/abledev/backend-functions",
     "build": "npm run build-backend-functions && webpack -c webpack.config.build.ts"
   },
@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "@ableco/abledev-components": "^0.0.1-alpha17",
-    "@ableco/abledev-dev-environment": "^0.0.1-alpha15",
+    "@ableco/abledev-dev-environment": "^0.0.1-alpha16",
     "@ableco/abledev-react": "^0.0.1-alpha7",
     "@prisma/client": "2.29.0",
     "@types/webpack-hot-middleware": "^2.25.5",
@@ -61,6 +61,7 @@
     "react-refresh": "^0.10.0",
     "react-refresh-typescript": "^2.0.2",
     "style-loader": "^3.2.1",
+    "superjson": "^1.7.5",
     "tailwindcss": "^2.2.7",
     "ts-loader": "^9.2.5",
     "ts-node": "^10.1.0",

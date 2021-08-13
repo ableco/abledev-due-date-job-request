@@ -13,8 +13,9 @@ function DueDate({ task, onSuccess }: { task: Task; onSuccess: () => void }) {
     <>
       <DatePicker
         value={task.dueDate ?? new Date()}
-        onChange={(date) => {
-          updateDateMutation.mutate({ id: task.id, date });
+        onChange={async (date) => {
+          await updateDateMutation.mutateAsync({ id: task.id, date });
+          onSuccess();
         }}
       >
         <button className="text-gray-400 text-xs hover:underline">
