@@ -6,3 +6,5 @@ dist
 .parcel-cache
 # Keep environment variables out of version control
 .env
+install.js
+install.js.map
