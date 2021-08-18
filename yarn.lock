@@ -2,6 +2,14 @@
 # yarn lockfile v1
 
 
+"@ableco/abledev-cli@^0.0.1-alpha2":
+  version "0.0.1-alpha2"
+  resolved "https://registry.able.co/@ableco%2fabledev-cli/-/abledev-cli-0.0.1-alpha2.tgz#2fbb67a03858b0dd0cc75c322bd3aadd702da6e4"
+  integrity sha512-KXsChNDNtICjB8293G9x8dqI4cKyHUKcPcWwMzJL7PKSBacbVwzwCfjsZtJTxVS9SWusBxxYccdkj2csR8Vkkw==
+  dependencies:
+    "@types/commander" "^2.12.2"
+    commander "^8.1.0"
+
 "@ableco/abledev-components@^0.0.1-alpha17":
   version "0.0.1-alpha17"
   resolved "https://registry.able.co/@ableco%2fabledev-components/-/abledev-components-0.0.1-alpha17.tgz#590fcedc1bdc29605f00710673bd3a595b0d10a5"
@@ -14,10 +22,10 @@
     react-popper "^2.2.5"
     uuid "^8.0.0"
 
-"@ableco/abledev-dev-environment@^0.0.1-alpha17":
-  version "0.0.1-alpha17"
-  resolved "https://registry.able.co/@ableco%2fabledev-dev-environment/-/abledev-dev-environment-0.0.1-alpha17.tgz#850e07ed785f62cc00a13065093bb38bedf294f9"
-  integrity sha512-PjZLqf1yHgIEFiBmNencmI5XBSmqqtYp6kL/T7woy1XZIqmicxX318QcpK1TEAA3rvmwiz5e3bp5o2mjohptUA==
+"@ableco/abledev-dev-environment@^0.0.1-alpha19":
+  version "0.0.1-alpha19"
+  resolved "https://registry.able.co/@ableco%2fabledev-dev-environment/-/abledev-dev-environment-0.0.1-alpha19.tgz#0b2479bda87b9fba0f65d92d5e962c0d3a73e7a1"
+  integrity sha512-4/fRFVERWz3xHVp7SMougzzAIFJI35TpV8L6PB8rOmaP0rIBF3GnjQXScQSsky85j37nutV+QFZI5ylXHXMPbw==
   dependencies:
     "@pmmmwh/react-refresh-webpack-plugin" "^0.4.3"
     "@types/glob" "^7.1.4"
@@ -180,6 +188,13 @@
   dependencies:
     "@types/connect" "*"
     "@types/node" "*"
+
+"@types/commander@^2.12.2":
+  version "2.12.2"
+  resolved "https://registry.able.co/@types%2fcommander/-/commander-2.12.2.tgz#183041a23842d4281478fa5d23c5ca78e6fd08ae"
+  integrity sha512-0QEFiR8ljcHp9bAbWxecjVRuAMr16ivPiGOw6KFQBVrVd0RQIcM3xKdRisH2EDWgVWujiYtHwhSkSUoAAGzH7Q==
+  dependencies:
+    commander "*"
 
 "@types/connect@*":
   version "3.4.35"
@@ -914,6 +929,11 @@ colorette@^1.2.1, colorette@^1.2.2:
   version "1.2.2"
   resolved "https://registry.npmjs.org/colorette/-/colorette-1.2.2.tgz"
   integrity sha512-MKGMzyfeuutC/ZJ1cba9NqcNpfeqMUcYmyF1ZFY6/Cn7CNSAKx6a+s48sqLqyAiZuaP2TcqMhoo+dlwFnVxT9w==
+
+commander@*, commander@^8.1.0:
+  version "8.1.0"
+  resolved "https://registry.able.co/commander/-/commander-8.1.0.tgz#db36e3e66edf24ff591d639862c6ab2c52664362"
+  integrity sha512-mf45ldcuHSYShkplHHGKWb4TrmwQadxOn7v4WuhDJy0ZVoY5JFajaRDKD0PNe5qXzBX0rhovjTnP6Kz9LETcuA==
 
 commander@^2.20.0:
   version "2.20.3"

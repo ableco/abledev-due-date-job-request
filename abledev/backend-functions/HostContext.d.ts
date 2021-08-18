@@ -1,9 +1,6 @@
 import { PrismaClient } from "@prisma/client";
-import express from "express";
-export interface HostContext {
-    db: PrismaClient;
-}
-export declare type RequestHostContext = HostContext & {
-    request: express.Request;
-    response: express.Response;
+declare const HostContext: {
+    db: PrismaClient<import(".prisma/client").Prisma.PrismaClientOptions, never, import(".prisma/client").Prisma.RejectOnNotFound | import(".prisma/client").Prisma.RejectPerOperation>;
 };
+export declare type HostContextType = typeof HostContext;
+export default HostContext;

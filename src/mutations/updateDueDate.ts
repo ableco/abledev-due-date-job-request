@@ -1,8 +1,9 @@
-import { RequestHostContext } from "../HostContext";
+import { RequestContext } from "@ableco/abledev-dev-environment";
+import { HostContextType } from "../HostContext";
 
 export default async function updateDueDate(
   { id, date }: { id: number; date: Date },
-  { db }: RequestHostContext,
+  { db, request }: RequestContext & HostContextType,
 ) {
   const currentTask = await db.task.findUnique({
     where: { id },

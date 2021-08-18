@@ -1,7 +1,9 @@
-import backendFunction_0 from "./mutations/updateDueDate";
+import backendFunction_0 from "./queries/getData";
+import backendFunction_1 from "./mutations/updateDueDate";
 
 const mappings = {
-  "mutations/updateDueDate": backendFunction_0,
+  "queries/getData": backendFunction_0,
+  "mutations/updateDueDate": backendFunction_1,
 } as const;
 
 export default mappings;
