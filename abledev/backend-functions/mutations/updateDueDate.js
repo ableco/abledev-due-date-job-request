@@ -38,24 +38,35 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 exports.__esModule = true;
 function updateDueDate(_a, _b) {
     var id = _a.id, date = _a.date;
-    var db = _b.db;
+    var db = _b.db, authenticate = _b.authenticate, request = _b.request, response = _b.response;
     return __awaiter(this, void 0, void 0, function () {
-        var currentTask;
+        var userId, task;
         return __generator(this, function (_c) {
             switch (_c.label) {
-                case 0: return [4 /*yield*/, db.task.findUnique({
-                        where: { id: id },
-                        rejectOnNotFound: true
-                    })];
+                case 0: return [4 /*yield*/, authenticate(request, response)];
                 case 1:
-                    currentTask = _c.sent();
+                    userId = (_c.sent()).userId;
+                    return [4 /*yield*/, db.task.findFirst({
+                            where: {
+                                id: id,
+                                OR: [
+                                    { assignedUserId: userId },
+                                    {
+                                        creatorId: userId
+                                    },
+                                ]
+                            },
+                            rejectOnNotFound: true
+                        })];
+                case 2:
+                    task = _c.sent();
                     return [4 /*yield*/, db.task.update({
-                            where: { id: currentTask.id },
+                            where: { id: task.id },
                             data: {
                                 dueDate: date
                             }
                         })];
-                case 2: return [2 /*return*/, _c.sent()];
+                case 3: return [2 /*return*/, _c.sent()];
             }
         });
     });
