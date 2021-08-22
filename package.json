@@ -1,5 +1,5 @@
 {
-  "name": "due-date",
+  "name": "@ableco/job-request--due-date",
   "version": "0.0.1",
   "author": "Julio García",
   "main": "dist/due-date.web",
