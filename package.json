@@ -1,6 +1,6 @@
 {
   "name": "@ableco/job-request--due-date",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "author": "Julio García",
   "main": "dist/DueDate",
   "license": "MIT",
