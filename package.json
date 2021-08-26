@@ -2,18 +2,13 @@
   "name": "@ableco/job-request--due-date",
   "version": "0.0.1",
   "author": "Julio García",
-  "main": "dist/due-date.web",
+  "main": "dist/DueDate",
   "license": "MIT",
-  "types": "dist/src/index.d.ts",
+  "types": "dist/index.d.ts",
   "files": [
     "dist",
     "lib"
   ],
-  "exports": {
-    ".": "./dist/due-date.web.js",
-    "./server-functions": "./dist/due-date.node.js",
-    "./styles.css": "./dist/main.css"
-  },
   "engines": {
     "node": ">=10"
   },
@@ -26,10 +21,10 @@
     "react": ">=16"
   },
   "dependencies": {
-    "@ableco/abledev-cli": "v0.0.7",
+    "@ableco/abledev-cli": "v0.0.13",
     "@ableco/abledev-components": "^0.0.1-alpha17",
-    "@ableco/abledev-dev-environment": "v0.0.7",
-    "@ableco/abledev-react": "v0.0.7",
+    "@ableco/abledev-dev-environment": "v0.0.13",
+    "@ableco/abledev-react": "v0.0.13",
     "@prisma/client": "2.29.0",
     "@types/webpack-hot-middleware": "^2.25.5",
     "cors": "^2.8.5",

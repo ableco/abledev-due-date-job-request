@@ -1,7 +1,7 @@
 import { RequestContext } from "@ableco/abledev-dev-environment";
 import { PrismaClient } from "@prisma/client";
 declare const HostContext: {
-    db: PrismaClient<import(".prisma/client").Prisma.PrismaClientOptions, never, import(".prisma/client").Prisma.RejectOnNotFound | import(".prisma/client").Prisma.RejectPerOperation>;
+    db: PrismaClient<import(".prisma/client").Prisma.PrismaClientOptions, never, import(".prisma/client").Prisma.RejectOnNotFound | import(".prisma/client").Prisma.RejectPerOperation | undefined>;
     authenticate: (_request: RequestContext["request"], response: RequestContext["response"]) => Promise<{
         userId: number;
     }>;
