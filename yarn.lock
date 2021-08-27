@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@ableco/abledev-cli@v0.0.13":
-  version "0.0.13"
-  resolved "https://registry.able.co/@ableco%2fabledev-cli/-/abledev-cli-0.0.13.tgz#5dca552ce74b2350fd80742b9b34287393bbdf0a"
-  integrity sha512-nXBTsI0eUzSxoO65kspYrPdDpFCfYTxGCItNKIYzxIFfpyqlFoIuF1vqJk53r72cKcdj8xCdiWzxSUnQSJa+og==
+"@ableco/abledev-cli@v0.0.19":
+  version "0.0.19"
+  resolved "https://registry.able.co/@ableco%2fabledev-cli/-/abledev-cli-0.0.19.tgz#bafc44a9934ef4e46a820348ba1a6ab382f3e4e2"
+  integrity sha512-BQJv6rCj+ftrx+NZz2EdKF2z4/HcgxvxyZOhFT8zoFnIpbLDH4yj/FK4z3GXtSdHn2L0MBcORBCVIucRzmTSZQ==
   dependencies:
     commander "^8.1.0"
     glob "^7.1.7"
@@ -24,10 +24,10 @@
     react-popper "^2.2.5"
     uuid "^8.0.0"
 
-"@ableco/abledev-dev-environment@v0.0.13":
-  version "0.0.13"
-  resolved "https://registry.able.co/@ableco%2fabledev-dev-environment/-/abledev-dev-environment-0.0.13.tgz#45c22e3e4363e5fb7de1241ce04fb3abff460975"
-  integrity sha512-IZQDp3DWS74Gu+g8m6Jo2Px6BZQsMzmwvrAo/wVvCr7DCSlxskZ1kmuDDvljxY8Sj9CLj42d3WzKZOtjZTBPuw==
+"@ableco/abledev-dev-environment@v0.0.19":
+  version "0.0.19"
+  resolved "https://registry.able.co/@ableco%2fabledev-dev-environment/-/abledev-dev-environment-0.0.19.tgz#908c6c70ebfaf1eb3e885dc173442f2aa97688f8"
+  integrity sha512-7CqeccMpLbjwgxyvN/21Q37EXqJ6LdB3dXwLqTnCLGQVlR7qEt2WPCIyt5N7Qyeu+DmQuaEh60oTVAqiMILh1g==
   dependencies:
     "@pmmmwh/react-refresh-webpack-plugin" "^0.4.3"
     "@types/glob" "^7.1.4"
@@ -57,10 +57,10 @@
     webpack-merge "^5.8.0"
     webpack-node-externals "^3.0.0"
 
-"@ableco/abledev-react@v0.0.13":
-  version "0.0.13"
-  resolved "https://registry.able.co/@ableco%2fabledev-react/-/abledev-react-0.0.13.tgz#42cd1b8433f85a2cedbc45c8fda304ad6567ba42"
-  integrity sha512-r/kCuD0jBSvCTKaWRrKccJA340Xs+kuZETWHjhDel0iQCTuGi4y7mhJRIqEesYZxVWDQ9NJ9nVpON6EsOqXPEQ==
+"@ableco/abledev-react@v0.0.19":
+  version "0.0.19"
+  resolved "https://registry.able.co/@ableco%2fabledev-react/-/abledev-react-0.0.19.tgz#1db7935030a89e9770403ac97200f190e17d6ab6"
+  integrity sha512-kUyhJp5NBdxQrtNi9+CetkV7dbH5c9fiPHlJvdg9WJMU8OKYSIpwz4C6K8gHRZ+MaMgaNjrwBB9deGC0fhT0oQ==
   dependencies:
     react-query "^3.19.2"
     superjson "^1.7.5"

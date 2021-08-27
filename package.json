@@ -21,10 +21,10 @@
     "react": ">=16"
   },
   "dependencies": {
-    "@ableco/abledev-cli": "v0.0.13",
+    "@ableco/abledev-cli": "v0.0.19",
     "@ableco/abledev-components": "^0.0.1-alpha17",
-    "@ableco/abledev-dev-environment": "v0.0.13",
-    "@ableco/abledev-react": "v0.0.13",
+    "@ableco/abledev-dev-environment": "v0.0.19",
+    "@ableco/abledev-react": "v0.0.19",
     "@prisma/client": "2.29.0",
     "@types/webpack-hot-middleware": "^2.25.5",
     "cors": "^2.8.5",
