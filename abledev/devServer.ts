@@ -4,7 +4,7 @@ import HostContext, { HostContextType } from "../src/HostContext";
 import { createHandleRequest } from "./createHandleRequest";
 
 startDevServer<HostContextType>({
-  createHandleRequest,
+  handleCreator: createHandleRequest,
   getPreviewData,
   hostContext: HostContext,
 });
